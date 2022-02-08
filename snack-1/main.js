@@ -20,14 +20,22 @@ const bicicletta = [
 
 function pesoMinore (MTB) {
 
-    minore = 0;
+    let {peso, nome} = MTB[0];
 
-    for(let i=0; i < MTB.length; i++) {
-        minore += MTB[i].peso;
+    for ( let i =0; i < MTB.length; i ++) {
+
+        if (peso > MTB[i].peso) {
+
+            peso = MTB[i].peso;
+            nome = MTB[i].nome;
+
+        }
     }
-    return minore;
+
+    let risultato = `il prodotto che pesa meno è ${nome} che pesa ${peso} kg`;
+    return risultato;
 
 }
 
-peso = pesoMinore (bicicletta);
-console.log("la bici più leggere è:" + peso)
+let pesoFinale = pesoMinore(bicicletta);
+console.log(pesoFinale);

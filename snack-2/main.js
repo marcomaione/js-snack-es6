@@ -42,4 +42,4 @@ for(let key in squadre) {
 
 // non riesco a cambiare il numero dell'arrey con il nome della squadra
 
-console.log(puntiFalli);
+console.log(squadre);
